@@ -39,7 +39,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 40px;
-    background-image: url('assets/background1.jpg');
+    background-image: url(background1.jpg');
     box-sizing: border-box;
 }
 
@@ -130,7 +130,7 @@ button[type="submit"]:hover {
 
 .right-panel-applicant {
     width: 50%;
-    background-image: url('assets/background1.jpg');
+    background-image: url(background1.jpg);
     color: white;
     display: flex;
     flex-direction: column;
