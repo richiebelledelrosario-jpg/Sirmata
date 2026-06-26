@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRMATA Student Tracker</title>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style_6.css">
+  
+</head>
+
+<body>
+  
+<nav class="navbar">
+
+    <!-- LEFT: Logo + Brand Name -->
+    <div class="sirmata">
+      <div class="logo">
+        <img src="assets/logo_2.png" alt="SIRMATA Logo">
+
+      </div>
+      <div class="brand-name">SIRMATA</div>
+    </div>
+
+    <!-- CENTER: Nav Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="frontpage_2.html">Home</a></li>
+      <li class="dropdown-parent">
+        <a href="#">Scholarships <span class="arrow">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="C_Campus.html">Campus</a></li>
+          <li><a href="A_Colleges.html">College</a></li>
+          <li><a href="B_Scholar.html">Scholarship Type</a></li>
+        </ul>
+      </li>
+      <li><a href="Page5.html">About Us</a></li>
+    </ul>
+
+    <!-- RIGHT: Search + Account Icons -->
+    <div class="nav-right">
+
+       <!-- Search -->
+<div class="search-wrap">
+
+  <button class="icon-btn" id="searchBtn">
+    <span class="material-symbols-outlined">search</span>
+  </button>
+
+  <div class="search-bar" id="searchBar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search scholarships..."
+    >
+    <button id="searchGo">Go</button>
+  </div>
+
+</div>
+
+<!-- Account -->
+<div class="acct-wrap">
+
+  <!-- Profile Button -->
+  <button class="icon-btn" id="acctBtn" title="Account" onclick="toggleAcct()">
+    <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+  <div class="acct-menu" id="acctMenu">
+
+    <!-- My Dashboard -->
+    <a href="trial.html">
+      <span class="material-symbols-outlined">dashboard</span>
+      My Dashboard
+    </a>
+
+    <hr class="divider">
+
+    <!-- Log Out -->
+ <a href="#" onclick="logOut(event)">
+  <span class="material-symbols-outlined">logout</span>
+  Log Out
+</a>
+
+  </div>
+</div>
+        </div>
+  </nav>
+
+<!-- Logout Modal — outside navbar -->
+<div id="logoutModal" class="logout-modal">
+  <div class="logout-box">
+    <div class="logout-icon">
+      <span class="material-symbols-outlined">logout</span>
+    </div>
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to end your current session?</p>
+    <div class="logout-buttons">
+      <button class="cancel-btn" onclick="cancelLogout()">Stay</button>
+      <button class="logout-btn" onclick="confirmLogout()">Log Out</button>
+    </div>
+  </div>
+</div>
+    <br> <br> <br>
+<div class="header">
+
+        <div class="logos">
+            <h2>SIRMATA</h2>
+            <p>Student Requirement Tracker</p>
+        </div>
+
+        <div class="search-box">
+
+            <span class="material-symbols-outlined">
+                search
+            </span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks...">
+
+        </div>
+
+</div> 
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- LEFT SIDE -->
+
+
+        <aside class="left-panel">
+
+            <h2>Add Requirement</h2>
+
+            <input
+                type="text"
+                id="taskTitle"
+                placeholder="Requirement title">
+
+
+            <textarea
+                id="taskNotes"
+                rows="5"
+                placeholder="Notes..."></textarea>
+
+
+            <label>Priority</label>
+
+            <select id="priority">
+
+                <option value="High">High</option>
+
+                <option value="Medium">Medium</option>
+
+                <option value="Low">Low</option>
+
+            </select>
+
+
+            <label>Due Date</label>
+
+            <input
+                type="date"
+                id="dueDate">
+
+
+            <label>Category</label>
+
+            <select id="category">
+
+                <option value="Personal">Personal</option>
+
+                <option value="Campus">Campus</option>
+
+                <option value="College">College</option>
+
+                <option value="Scholarship">Scholarship</option>
+
+            </select>
+
+
+
+            <label>Checklist Item</label>
+
+            <div class="checklist-input">
+
+                <input
+                    type="text"
+                    id="checkItem"
+                    placeholder="Example: Submit TOR">
+
+                <button id="addChecklist">
+                    +
+                </button>
+
+            </div>
+
+            <ul id="checkPreview"></ul>
+
+
+
+            <button
+                class="save-btn"
+                id="saveTask">
+
+                Save Requirement
+
+            </button>
+
+        </aside>
+
+
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="right-panel">
+
+
+            <!-- DASHBOARD -->
+
+
+            <div class="dashboard-cards">
+
+                <div class="card">
+
+                    <h3>Total</h3>
+
+                    <span id="totalTasks">0</span>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Pending</h3>
+
+                    <span id="pendingTasks">0</span>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Completed</h3>
+
+                    <span id="completedTasks">0</span>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Overdue</h3>
+
+                    <span id="overdueTasks">0</span>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <button class="filter active" data-filter="All">
+
+                    All
+
+                </button>
+
+                <button class="filter" data-filter="High">
+
+                    High
+
+                </button>
+
+                <button class="filter" data-filter="Medium">
+
+                    Medium
+
+                </button>
+
+                <button class="filter" data-filter="Low">
+
+                    Low
+
+                </button>
+
+                <button class="filter" data-filter="Completed">
+
+                    Completed
+
+                </button>
+
+            </div>
+
+
+
+
+
+            <!-- TASK LIST -->
+
+            <div id="taskContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+    <!-- TEMPLATE -->
+
+
+    <template id="taskTemplate">
+
+        <div class="task-card">
+
+            <div class="task-top">
+
+                <div>
+
+                    <h3 class="task-title">
+
+                    </h3>
+
+                    <span class="task-category">
+
+                    </span>
+
+                </div>
+
+                <button class="collapse">
+
+                    ▼
+
+                </button>
+
+            </div>
+
+
+            <div class="task-body">
+
+                <div class="task-info">
+
+                    <span class="priority">
+
+                    </span>
+
+                    <span class="due">
+
+                    </span>
+
+                </div>
+
+
+                <p class="notes">
+
+                </p>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-bar">
+
+                    </div>
+
+                </div>
+
+                <p class="progress-text">
+
+                </p>
+
+
+
+                <div class="checklist">
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <button class="edit">
+
+                        Edit
+
+                    </button>
+
+                    <button class="delete">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+
+<script src="script_6.js"></script>
+
+</body>
+
+</html>

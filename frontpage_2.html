@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontpage.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="frontpage.js" defer></script>
+
+    <title>Home Page</title>
+</head>
+<body>
+
+  
+<nav class="navbar">
+
+    <!-- LEFT: Logo + Brand Name -->
+    <div class="sirmata">
+      <div class="logo">
+        <img src="assets/logo_2.png" alt="SIRMATA Logo">
+
+      </div>
+      <div class="brand-name">SIRMATA</div>
+    </div>
+
+    <!-- CENTER: Nav Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="frontpage.html">Home</a></li>
+      <li class="dropdown-parent">
+        <a href="#">Scholarships <span class="arrow">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="C_Campus.html">Campus</a></li>
+          <li><a href="A_Colleges.html">College</a></li>
+          <li><a href="B_Scholar.html">Scholarship Type</a></li>
+        </ul>
+      </li>
+      <li><a href="Page5.html">About Us</a></li>
+    </ul>
+
+    <!-- RIGHT: Search + Account Icons -->
+    <div class="nav-right">
+
+      <!-- Search -->
+<div class="search-wrap">
+
+  <button class="icon-btn" id="searchBtn">
+    <span class="material-symbols-outlined">search</span>
+  </button>
+
+  <div class="search-bar" id="searchBar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search scholarships..."
+    >
+    <button id="searchGo">Go</button>
+  </div>
+
+</div>
+
+<!-- Account -->
+<div class="acct-wrap">
+
+  <!-- Profile Button -->
+  <button class="icon-btn" id="acctBtn" title="Account" onclick="toggleAcct()">
+    <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+  <div class="acct-menu" id="acctMenu">
+
+      <!-- My Dashboard -->
+    <a href="trial.html">
+      <span class="material-symbols-outlined">dashboard</span>
+      My Dashboard
+    </a>
+
+    <hr class="divider">
+
+    <!-- Log Out -->
+<a href="#" onclick="logOut(event)">
+  <span class="material-symbols-outlined">logout</span>
+  Log Out
+</a>
+
+  </div>
+</div>
+        </div>
+
+  </nav>
+<!-- Logout Modal — outside navbar -->
+<div id="logoutModal" class="logout-modal">
+  <div class="logout-box">
+    <div class="logout-icon">
+      <span class="material-symbols-outlined">logout</span>
+    </div>
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to end your current session?</p>
+    <div class="logout-buttons">
+      <button class="cancel-btn" onclick="cancelLogout()">Stay</button>
+      <button class="logout-btn" onclick="confirmLogout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    
+    <div class="container" >
+<video autoplay loop muted plays-inline class="background-clips">
+<source src="assets/VID001.mp4" type="video/mp4"> 
+</video>
+</div>
+<br> <br> <br> <br> <br> <br>  <br> <br> <br> 
+<h1 class="League_title"> View Successfull Stories Of Scholars</h1>
+<div class="carousel">
+<div class="stories">
+   <a href="https://ucc-caloocan.edu.ph/post/turning-duty-into-a-dream-ucc-security-guard-finally-earns-his-degree"> 
+<div class="card">
+  <img src="assets/1.png" alt="Turning my duty into a dream"  />
+</div> </a>
+
+<a href="https://www.tzuchi.org.ph/news/features-and-stories/tzu-chi-reaffirms-partnership-with-qcu-ucc-plmar/">
+<div class= "card">
+  <img src="assets/2.png" alt="A vision of hope" />
+</div> </a>
+
+<a href="https://www.tzuchi.org.ph/news/features-and-stories/tzu-chi-reaffirms-partnership-with-qcu-ucc-plmar/">
+<div class= "card"> 
+  <img src="assets/3.png" alt="Stronger together" />
+</div> </a>
+
+<a href="https://ucc-caloocan.edu.ph/about.php">
+<div class= "card"> 
+  <img src="assets/4.png" alt="Top of the board" />
+</div> </a>
+
+<a href="https://www.bfar.da.gov.ph/opportunities/scholarship/">
+<div class= "card"> 
+  <img src="assets/5.png" alt="Where dream sets sail" />
+</div>  </a>
+
+<a href="https://newsinfo.inquirer.net/1604814/son-of-vendor-driver-graduates-at-rich-kids-school-in-bacolod">
+<div class= "card"> 
+  <img src="assets/6.png" alt="From the streets to success" />
+</div> </a>
+</div>
+
+
+<div aria-hidden class="stories"> 
+  
+<a href="https://ucc-caloocan.edu.ph/post/turning-duty-into-a-dream-ucc-security-guard-finally-earns-his-degree"> 
+<div class="card">
+  <img src="assets/1.png" alt="Turning my duty into a dream" />
+</div> </a>
+
+<a href="https://www.tzuchi.org.ph/news/features-and-stories/tzu-chi-reaffirms-partnership-with-qcu-ucc-plmar/">
+<div class= "card">
+  <img src="assets/2.png" alt="A vision of hope" />
+</div> </a> 
+
+<a href="https://www.tzuchi.org.ph/news/features-and-stories/tzu-chi-reaffirms-partnership-with-qcu-ucc-plmar/">
+<div class= "card"> 
+  <img src="assets/3.png" alt="Stronger together" />
+</div> </a>
+
+<a href="https://ucc-caloocan.edu.ph/about.php">
+<div class= "card"> 
+  <img src="assets/4.png" alt="Top of the board" />
+</div> </a>
+
+<a href="https://www.bfar.da.gov.ph/opportunities/scholarship/">
+<div class= "card"> 
+  <img src="assets/5.png" alt="Where dream sets sail" />
+</div> </a> 
+
+<a href="https://newsinfo.inquirer.net/1604814/son-of-vendor-driver-graduates-at-rich-kids-school-in-bacolod">
+<div class= "card"> 
+  <img src="assets/6.png" alt="From the streets to success" />
+</div> </a>
+
+</div>
+</div>  
+<br> <br> <br> <br>
+ <div class="banner">
+    <h2>Start Here</h2>
+    <div class="forbanner">
+      <p>Find the financial support you need to fuel your dreams.</p>
+    </div>
+  </div>  
+<br> <br> <br> <br> <br>
+<h1 class="League_title"> Our Gallery of Winners</h1>
+<p id="winner"> Sirmata.com has been a trusted partner for 100 thousand students and families seeking college aid. <br> Join our community and see if you will be our next featured winner!</p>
+
+  <div class="feedback">
+    <div class="content">
+      <img src="assets/rich.jpg" alt="cropped_circle_image">
+      <h3>Richiebelle Delrosario</h3>
+      BS Computer Science <br>
+      <p>"Sirmata.com helped me find the perfect scholarship that matched my course. It was easy to navigate and very helpful!"</p>
+    </div>
+
+    <div class="content">
+      <img src="assets/angelyn.jpg" alt="cropped_circle_image">
+      <h3>Angelyn Eduarte</h3>
+      BSEd Early Childhood Education<br>
+      <p>"I never knew about so many scholarship opportunities until I used Sirmata. Thank you for making it simple!"</p>
+    </div>
+
+    <div class="content">
+      <img src="assets/meryl.jpg" alt="cropped_circle_image">
+      <h3>Meryl Mae Baturino</h3>
+      BS Computer Engineering<br>
+      <p>"Sirmata.com motivates students like me to apply for more scholarships and plan ahead for college."</p>
+    </div>
+
+    <div class="content">
+      <img src="assets/nico.jpg" alt="cropped_circle_image">
+      <h3>Nicolas Ezekiel Constantino</h3>
+      BS Information Technology<br>
+      <p>"I really appreciated the Verified Scholarship listings. It saved me from scams and fake offers."</p>
+    </div>
+
+    <div class="content">
+      <img src="assets/dus.jpg" alt="cropped_circle_image">
+      <h3>Dustin Mark Yu</h3>
+      BS Accountancy<br>
+      <p>"The step-by-step guide on how to apply was very clear. I got my scholarship faster than I expected!"</p>
+    </div>
+
+    <div class="content">
+      <img src="assets/gab.jpg" alt="cropped_circle_image">
+      <h3>Luis Gabrielle Mondragon</h3>
+      BS Criminology<br>
+      <p>"The website layout is clean and easy to understand. Even someone new to scholarships can use it with confidence."</p>
+    </div>
+
+  </div>
+<br> <br> <br> <br>
+  
+  <h1 class="League_title"> How Sirmata.com works</h1>
+  <br> 
+  <div class="StepDiv">
+    <div class="StepCard">
+        <div class="StepCard">
+    <div class="step">1</div>
+    <div class="StepContent">
+        <h2>Secure Your Profile</h2>
+        <p>
+            By creating an account, you allow us to store your preferences,
+            ensuring that every opportunity we find is relevant to your unique journey.
+        </p>
+    </div>
+
+</div>
+    </div>
+    <div class="StepCard">
+        <div class="StepCard">
+    <div class="step">2</div>
+    <div class="StepContent">
+        <h2>Explore Your Opportunities</h2>
+        <p> 
+            We use your profile to scan the details
+            and bring the most compatible, high-value scholarships directly to your dashboard.
+        </p>
+    </div>
+</div>
+
+    </div>
+    <div class="StepCard">
+        <div class="StepCard">
+    <div class="step">3</div>
+    <div class="StepContent">
+        <h2>Launch Your Application</h2>
+        <p>
+            Once you’ve found the right match,
+            simply click the direct link provided to jump straight to the provider's site. 
+        </p>
+    </div>
+</div>
+    </div>
+
+</div>
+<br> <br> <br> <br> <br> <br> 
+
+ <div class="wrap">
+  <h1>Frequently Asked <span>Questions</span></h1>
+  
+  <div id="faq">
+    <div class="question">
+      <button>What is Sirmata.com?<span class="icon">+</span></button>
+      <div class="ans"><p>Sirmata.com is a dedicated online scholarship portal specifically designed for the students and incoming freshmen of the University of Caloocan City (UCC). It serves as a centralized repository where users can discover various financial grants and educational assistance programs tailored to their academic journey.</p></div>
+    </div>
+    <div class="question">
+      <button>Does this site award the scholarships directly?<span class="icon">+</span></button>
+      <div class="ans"><p>No, Sirmata.com does not act as the awarding body for the financial grants listed on the platform. The site functions as an information and navigation hub that displays available opportunities, while the actual evaluation and disbursement of funds remain with the respective scholarship providers..</p></div>
+    </div>
+    <div class="question">
+      <button>Are the scholarships listed on this site legitimate? <span class="icon">+</span></button>
+      <div class="ans"><p>Yes, all scholarship opportunities featured on the platform are verified for authenticity. The site ensures that the listings are legitimate to provide a secure and trustworthy environment for UCC students seeking financial aid.</p></div>
+    </div>
+    <div class="question">
+      <button>Is sirmata.com completely free?<span class="icon">+</span></button>
+      <div class="ans"><p>The platform is entirely free of charge and requires no payment for access or usage. It is a public resource specifically maintained to support the student body and applicants of the University of Caloocan City without any financial barriers.</p></div>
+    </div>
+    <div class="question">
+      <button>How do I apply for a scholarship I found here?<span class="icon">+</span></button>
+      <div class="ans"><p>To begin an application, you must first register for an account and log in to the portal to access the full listings. Once you have identified a grant that matches your qualifications, you simply need to click the "Apply Here" button to proceed with the specific requirements for that scholarship.</p></div>
+    </div>
+    <div class="question">
+      <button>Can I filter scholarships?  <span class="icon">+</span></button>
+      <div class="ans"><p>Yes, the platform is equipped with an integrated filtering system that allows users to sort through listings based on their personal preferences. This functionality enables students to efficiently find the grants that best align with their specific academic standing or financial needs.</p></div>
+    </div>
+  </div>
+</div>
+  <br> <br> <br> <br> <br> <br>
+
+<footer>
+  <div class="footer-content">
+    <h2>Sirmata.com</h2>
+    <p>Empowering students through opportunity.</p>
+    <div class="footer-links">
+      <a href="#">Apply Now</a> | 
+      <a href="#">Eligibility</a> | 
+      <a href="#">Contact</a>
+    </div>
+    <address>
+      questions@sirmata.com <br>
+      123 Education St.
+    </address>
+    
+    <p class="copyright">&copy; 2026 University of Caloocan City</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

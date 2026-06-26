@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student</title>
+<link rel="stylesheet" href="style_2.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<script src="script_2.js" defer></script>
+</head>
+<body>
+
+ 
+<nav class="navbar">
+
+    <!-- LEFT: Logo + Brand Name -->
+    <div class="sirmata">
+      <div class="logo">
+        <img src="assets/logo_2.png" alt="SIRMATA Logo">
+
+      </div>
+      <div class="brand-name">SIRMATA</div>
+    </div>
+
+    <!-- CENTER: Nav Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="frontpage.html">Home</a></li>
+      <li class="dropdown-parent">
+        <a href="#">Scholarships <span class="arrow">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="Page2.html">Campus</a></li>
+          <li><a href="Page4.html">College</a></li>
+          <li><a href="Page3.html">Scholarship Type</a></li>
+        </ul>
+      </li>
+      <li><a href="Page5.html">About Us</a></li>
+    </ul>
+
+    <!-- RIGHT: Search + Account Icons -->
+    <div class="nav-right">
+
+       <!-- Search -->
+<div class="search-wrap">
+
+  <button class="icon-btn" id="searchBtn">
+    <span class="material-symbols-outlined">search</span>
+  </button>
+
+  <div class="search-bar" id="searchBar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search scholarships..."
+    >
+    <button id="searchGo">Go</button>
+  </div>
+
+</div>
+
+<!-- Account -->
+<div class="acct-wrap">
+
+  <!-- Profile Button -->
+  <button class="icon-btn" id="acctBtn" title="Account" onclick="toggleAcct()">
+    <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+  <div class="acct-menu" id="acctMenu">
+
+    <!-- My Dashboard -->
+    <a href="trial.html">
+      <span class="material-symbols-outlined">dashboard</span>
+      My Dashboard
+    </a>
+
+    <hr class="divider">
+
+    <!-- Log Out -->
+ <a href="#" onclick="logOut(event)">
+  <span class="material-symbols-outlined">logout</span>
+  Log Out
+</a>
+
+  </div>
+</div>
+        </div>
+  </nav>
+
+<!-- Logout Modal — outside navbar -->
+<div id="logoutModal" class="logout-modal">
+  <div class="logout-box">
+    <div class="logout-icon">
+      <span class="material-symbols-outlined">logout</span>
+    </div>
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to end your current session?</p>
+    <div class="logout-buttons">
+      <button class="cancel-btn" onclick="cancelLogout()">Stay</button>
+      <button class="logout-btn" onclick="confirmLogout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="sorting">
+<nav class="navbar_2">
+  <ul class="sorting-list">
+  <li class="dropdown-child">
+  <a href="#">Campus</a>
+     <ul class="dropitout">
+      <li><a href="#South">Main</a></li>
+      <li><a href="#Congress">Congressional</a></li>
+      <li><a href="#Camarin">Camarin</a></li>
+      <li><a href="#BS">Bagong Silang</a></li>
+     </ul>
+  </li>
+  </ul>
+</nav>
+</div>
+
+<section class="box active-section">
+<h1 class="Title">UCC Campuses</h1>
+
+<div class="images">
+
+<ul>
+    <li class="yellow">Main Campus</li>
+        <strong>Address:</strong> Biglang Awa Street, Cor 11th Ave Caloocan City<br>
+        <strong>Contact:</strong> 8528-4654 or 53106855 for Admin
+    <li class="yellow">Congressional Extension Campus</li>
+        <strong>Address:</strong> Congressional Rd Ext, Barangay 171, Caloocan<br>
+        <strong>Contact:</strong> 85242267
+    <li class="yellow">Camarin Extension Campus</li>
+        <strong>Address:</strong> 23 Chrysanthemum St, Barangay 174, Caloocan, Metro Manila<br>
+        <strong>Contact:</strong> 88132324
+    <li class="yellow">Bagong Silang Extension Campus</li>
+        <strong>Address:</strong> Barangay 176, Bagong Silang, Caloocan City<br>
+        <strong>Contact:</strong> 88132324
+</ul>
+<img src="assets/Lungsod.png">
+</div>
+</section>
+
+<div id="Congress" class="campus-section">
+<h1 class="Campus">Congress</h1>
+
+<div class="container">
+<div class="left-panel">
+  <h1>University of Caloocan City + Tzu Chi Foundation</h1>
+    <a href="https://ucc-caloocan.edu.ph/post/ucc-strengthens-scholarship-programs-through-partnership-with-tzu-chi-foundation" class="apply-btn">Apply Here</a>
+    <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <p>Financially challenged students enrolled at UCC</p>
+      <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application Form</li>
+      <li>Transcripts</li>
+      <li>Income documents</li>
+      <li>Interview</li>
+    </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually starts in March and ends during April</p>
+    </div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Bachelor of Science in Psychology</li>
+    <li>Bachelor of Science in Computer Science</li>
+    <li>Bachelor of Science in Information System</li>
+    <li>Bachelor of Science in Information Technology</li>
+    <li>Bachelor of Science in Entertainment & Multimedia Computing</li>
+    <li>Bachelor of Arts in Political Science</li>
+    <li>Bachelor of Arts in Communication</li>
+    <li>Bachelor in Public Administration</li>
+    <li>Bachelor of Science in Business Administration</li>
+    <li>Bachelor of Science in Accountancy</li>
+    <li>Bachelor of Science in Tourism</li>
+    <li>Bachelor of Science in Hotel & Restaurant Management</li>
+    <li>Bachelor in Elementary Education</li>
+    <li>Bachelor in Secondary Education</li>
+    <li>Bachelor of Science in Criminology</li>
+    <li>BS Electrical Engineering</li>
+    <li>BS Electronics Engineering</li>
+    <li>BS Computer Engineering</li>
+  </ul>
+    <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Tuition subsidy</li>
+      <li>Financial support for low-income students</li>
+    </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Need based</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+  <h1>Caloocan City Government Scholarship Program</h1>
+  <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+  <div class="scrollbar">
+    <p class="subTitle">Eligibility:</p>
+    <p>Filipino citizen, Incoming freshman or currently enrolled, priority to low-income families</p>
+    <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application Form</li>
+      <li>Certificate of Residency</li>
+      <li>Transcripts of Record / Report Card</li>
+      <li>Proof of Family Income</li>
+    </ul>
+    <p class="subTitle">Deadline:</p>
+    <p>Announced by the city government</p>
+    </div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <p>No fixed list</p>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Cash Assistance</li>
+    <li>Educational Aid</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Merit based / Need based</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+<h1>CHED Scholarship Program (All Majors Eligible)</h1>
+<a href="https://ched.gov.ph/merit-scholarship/" class="apply-btn">Apply Here</a>
+<div class="scrollbar">
+<p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Freshman or currently enrolled college student in related programs</li>
+    <li>Strong academic performance</li>
+  </ul>
+<p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Filled application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>Report Card / Transcript of Records (TOR)</li>
+    <li>Proof of income (if required)</li>
+  </ul>
+<p class="subTitle">Deadline:</p>
+    <p>Usually May–July every year</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+   <ul class="prog">
+    <li>Criminal Justice Education</li>
+    <li>Criminology</li>
+    <li>Industrial Security Management (ISM)</li>
+    <li>Other CHED-recognized related programs</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+   <ul class="prog">
+    <li>Public HEIs: ₱15,000 per semester (Full Merit), ₱7,500 per semester (Half Merit)</li>
+    <li>Private HEIs: ₱30,000 per semester (Full Merit), ₱15,000 per semester (Half Merit)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+   <p>Government / Merit-based</p>
+  <p class="subTitle">Campus:</p>
+   <p>South, Camarin, Congress, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+   <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+<h1>CHED Scholarship Program (Business / Accountancy)</h2>
+<a href="https://ched.gov.ph/merit-scholarship/" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+   <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Freshman or currently enrolled college student in Business / Accountancy programs</li>
+    <li>Strong academic performance</li>
+    </ul>
+  <p class="subTitle">Requirements:</p>
+   <ul class="prog">
+      <li>Application Form (CHED online portal)</li>
+      <li>PSA Birth Certificate</li>
+      <li>Transcript of Records or Report Card</li>
+      <li>Income proof (if required)</li>
+    </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually May – July yearly</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Benefits:</p>
+  <p><strong>Public HEIs:</strong></p>
+    <ul class="prog">
+      <li>₱15,000 per semester (Full Merit)</li>
+      <li>₱7,500 per semester (Half Merit)</li>
+    </ul>
+  <p><strong>Private HEIs:</strong></p>
+    <ul class="prog">
+      <li>₱30,000 per semester (Full Merit)</li>
+      <li>₱15,000 per semester (Half Merit)</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+    <p>Government / Merit-based</p>
+  <p class="subTitle">Campus:</p>
+    <p>South, Camarin, Congress, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+    <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+ 
+<div class="container">
+<div class="left-panel">
+<h1>Commission on Higher Education (CHED) Scholarship Program</h1>
+    <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+    <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Filipino citizen</li>
+        <li>Incoming freshman or currently enrolled in BSED / Education / Early Childhood Education</li>
+        <li>Strong academic performance</li>
+        <li>Family income within required bracket (for some categories)</li>
+      </ul>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Application Form (CHED online portal)</li>
+        <li>PSA Birth Certificate</li>
+        <li>Completed application form</li>
+        <li>SHS report card (for freshmen) or TOR (for current students)</li>
+        <li>Certificate of Good Moral Character</li>
+        <li>Income proof (if required)</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually May–July (varies by region yearly)</p>
+    </div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li>Bachelor of Science in Secondary Education</li>
+        <li>Bachelor of Science in Education</li>
+        <li>Bachelor of Science in Early Childhood Education</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+      <p><strong>Public HEIs:</strong></p>
+      <ul class="prog">
+        <li>₱15,000 per semester (Full Merit)</li>
+        <li>₱7,500 per semester (Half Merit)</li>
+      </ul>
+      <p><strong>Private HEIs:</strong></p>
+      <ul class="prog">
+        <li>₱30,000 per semester (Full Merit)</li>
+        <li>₱15,000 per semester (Half Merit)</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Merit-based or Needs-based</p>
+      <p class="subTitle">Campus:</p>
+      <p>South, Congress</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Freshman & Current College Students</p>
+    </div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+    <h1>Department of Education (DepEd) – Teacher Education Scholarship Support</h1>
+    <a href="https://www.deped.gov.ph" class="apply-btn">Apply Here</a>
+    <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Filipino citizen</li>
+        <li>Enrolled in Teacher Education programs (BSED / BEED / Early Childhood Education)</li>
+        <li>Good academic standing</li>
+        <li>Willing to serve in Philippine schools after graduation (for some programs)</li>
+      </ul>
+
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Proof of enrollment</li>
+        <li>Grades / TOR</li>
+        <li>Recommendation letter</li>
+        <li>Application form</li>
+      </ul>
+
+      <p class="subTitle">Deadline:</p>
+      <p>Varies per program announcement. Usually announced before the start of the academic year.</p>
+    </div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li>Bachelor of Secondary Education (BSED)</li>
+        <li>Bachelor of Elementary Education (BEED)</li>
+        <li>Bachelor of Early Childhood Education (BECED)</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+
+      <ul class="prog">
+        <li>Tuition and school fee assistance (for private institutions)</li>
+        <li>For public universities like UCC: financial assistance given as stipend</li>
+        <li>₱3,000 – ₱8,000 monthly living allowance (depending on budget allocation)</li>
+        <li>OR ₱10,000 – ₱20,000 per semester financial grant</li>
+        <li>₱3,000 – ₱5,000 annual book allowance</li>
+        <li>Practice Teaching / Internship support</li>
+        <li>Possible priority hiring in public schools after graduation</li>
+        <li>Professional development training and seminars</li>
+        <li>May require 1–3 years return service in DepEd public schools</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government</p>
+      <p class="subTitle">Campus:</p>
+      <p>South, Congress</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Department of Science and Technology – DOST-SEI Scholarship (For BSED Science)</h1>
+  <a href="https://sei.dost.gov.ph" class="apply-btn">Apply Here</a>
+  <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Filipino citizen</li>
+        <li>STEM SHS graduate (for freshmen)</li>
+        <li>Enrolled in BSED Science or other science-related programs</li>
+        <li>Strong grades in Math & Science</li>
+      </ul>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Online application</li>
+        <li>SHS report card or TOR</li>
+        <li>PSA Birth Certificate</li>
+        <li>Examination (if required)</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually August–October yearly</p>
+  </div>
+</div>
+
+<div class="right-panel">
+  <div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li>Bachelor of Secondary Education (BSED) – Science</li>
+        <li>Engineering Programs:</li>
+        <li>• Computer Engineering</li>
+        <li>• Electronics Engineering</li>
+        <li>• Electrical Engineering</li>
+        <li>• Industrial Engineering</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <li>₱8,000 monthly living allowance</li>
+        <li>₱40,000 per academic year tuition support (for private HEIs)</li>
+        <li>Book allowance: ₱10,000 per year</li>
+        <li>Clothing allowance: ₱1,000 (1st sem, 1st year only)</li>
+        <li>Thesis allowance: ₱10,000</li>
+        <li>Graduation allowance: ₱1,000</li>
+        <li>Group accident insurance</li>
+        <li>For public HEIs like UCC, tuition is free so allowance is the main benefit</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Merit-based</p>
+      <p class="subTitle">Campus:</p>
+      <p>South, Congress</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Freshman & Current College Students</p>
+    </div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Commission on Higher Education (CHED) – Student Financial Assistance Programs (StuFAPs)</h1>
+  <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+    <ul class="prog">
+      <li>Filipino citizen</li>
+      <li>Senior high school graduate or currently enrolled in college</li>
+      <li>Combined annual gross income of parents/guardian must not exceed CHED limits</li>
+      <li>Must enroll in recognized public or private HEIs</li>
+    </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application form</li>
+      <li>Report Card / Grades</li>
+      <li>Certificate of Indigency or Income Tax Return</li>
+      <li>Birth Certificate</li>
+      <li>Certificate of Good Moral Character</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+    <p>Usually between March–July (varies per region)</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+    <p class="subTitle">Program</p>
+    <ul class="prog">
+      <li>Open to all CHED-recognized undergraduate programs</li>
+    </ul>
+    <p class="subTitle">Benefits:</p>
+    <ul class="prog">
+      <li>Tuition & other school fees</li>
+      <li>Full: up to ₱40,000 per year</li>
+      <li>Partial: up to ₱20,000 per year</li>
+      <li>Book allowance</li>
+      <li>Monthly stipend</li>
+    </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Need-based (Full or Partial Scholarship)</p>
+      <p class="subTitle">Campus:</p>
+      <p>South, Congress</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Undergraduate</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Department of Science and Technology (DOST-SEI) Undergraduate Scholarship</h1>
+  <a href="https://sei.dost.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Natural-born Filipino citizen</li>
+    <li>STEM strand senior high graduate</li>
+    <li>Belong to top 5% of graduating class (or meet DOST criteria)</li>
+    <li>Must enroll in priority S&T programs</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application form (online)</li>
+    <li>Form 137 / Transcript</li>
+    <li>Certificate of Good Moral Character</li>
+    <li>Birth Certificate</li>
+    <li>Recent photo</li>
+  </ul>
+    <p class="subTitle">Deadline:</p>
+    <p>Usually October–December</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+    <ul class="prog">
+      <li>Priority Science & Technology Programs</li>
+      <li>Engineering (e.g., Computer, Electronics, Electrical, Industrial)</li>
+      <li>Other DOST-approved S&T courses</li>
+    </ul>
+
+  <p class="subTitle">Benefits:</p>
+    <ul class="prog">
+      <li>₱40,000 per year tuition support</li>
+      <li>₱7,000 monthly stipend</li>
+      <li>Book allowance</li>
+      <li>Uniform allowance</li>
+      <li>Thesis allowance</li>
+      <li>Graduation allowance</li>
+      <li>Insurance</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Government / Merit-Based</p>
+  <p class="subTitle">Campus:</p>
+  <p>South, Congress</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>College Students</p>
+</div>
+</div>
+</div>
+ 
+<div class="container">
+<div class="left-panel">
+  <h1>Government Service Insurance System (GSIS) – Educational Subsidy Program (ESP)</h1>
+  <a href="https://www.gsis.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+    <ul class="prog">
+      <li>Child/dependent of active GSIS member</li>
+      <li>Incoming 1st–5th year college</li>
+      <li>Good academic standing</li>
+    </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application form</li>
+      <li>Proof of GSIS membership</li>
+      <li>Grades</li>
+      <li>Birth Certificate</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+    <p>Usually June–July</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li><strong>Undergraduate:</strong> Open to eligible college programs</li>
+    <li><strong>Graduate School:</strong></li>
+    <li>Doctor in Public Administration</li>
+    <li>Doctor of Philosophy, Major in Educational Management</li>
+    <li>Master in Public Administration</li>
+    <li>Master of Arts in Education, Major in Educational Management</li>
+    <li>Master of Arts in Education, Major in Teaching in the Early Grades</li>
+    <li>Master of Arts in Education, Major in Teaching Science</li>
+    <li>Master of Business Administration</li>
+    <li>Master of Science in Criminal Justice, Major in Criminology</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>₱10,000 – ₱20,000 annual financial assistance</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+    <p>Government / Scholarship Grant</p>
+  <p class="subTitle">Campus:</p>
+    <p>South, Congress</p>
+  <p class="subTitle">Educational Level:</p>
+    <p>College Students</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CAMARIN CAMPUS -->
+<div id="Camarin" class="campus-section">
+  <h1 class="Campus">Camarin</h1>
+
+<div class="container">
+  <div class="left-panel">
+    <h1>University of Caloocan City + Tzu Chi Foundation</h1>
+    <a href="https://ucc-caloocan.edu.ph/post/ucc-strengthens-scholarship-programs-through-partnership-with-tzu-chi-foundation" class="apply-btn">Apply Here</a>
+    <div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Financially challenged students enrolled at UCC</p>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+    <li>Application Form</li>
+    <li>Transcripts</li>
+    <li>Income documents</li>
+    <li>Interview</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually starts in March and ends during April</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+    <ul class="prog">
+      <li>Bachelor of Science in Psychology</li>
+      <li>Bachelor of Science in Computer Science</li>
+      <li>Bachelor of Science in Information System</li>
+      <li>Bachelor of Science in Information Technology</li>
+      <li>Bachelor of Science in Entertainment & Multimedia Computing</li>
+      <li>Bachelor of Arts in Political Science</li>
+      <li>Bachelor of Arts in Communication</li>
+      <li>Bachelor in Public Administration</li>
+      <li>Bachelor of Science in Business Administration</li>
+      <li>Bachelor of Science in Accountancy</li>
+      <li>Bachelor of Science in Tourism</li>
+      <li>Bachelor of Science in Hotel & Restaurant Management</li>
+      <li>Bachelor in Elementary Education</li>
+      <li>Bachelor in Secondary Education</li>
+      <li>Bachelor of Science in Criminology</li>
+      <li>BS Electrical Engineering</li>
+      <li>BS Electronics Engineering</li>
+      <li>BS Computer Engineering</li>
+    </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Tuition subsidy</li>
+      <li>Financial support for low-income students</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+    <p>Need based</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Caloocan City Government Scholarship Program</h1>
+  <p class="apply-btn">https://ched.gov.ph</p>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Filipino citizen </p>
+  <p> Incoming freshman or currently enrolled</p>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application Form</li>
+      <li>Certificate of Residency</li>
+      <li>Transcripts of Record / Report Card</li>
+      <li>Proof of Family Income</li>
+    </ul>
+    <p class="subTitle">Deadline:</p>
+    <p>Announced by the city government</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <p>No fixed list</p>
+  <p class="subTitle">Benefits:</p>
+    <ul class="prog">
+    <li>Cash Assistance</li>
+    <li>Educational Aid</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Merit based / Need based</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>CHED Scholarship Program (All Majors Eligible — incl. Criminal Justice / Criminology / ISM)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Freshman or currently enrolled college student in Criminal Justice / Criminology / Industrial Security Management / related courses</li>
+    <li>Strong academic performance</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Filled application form (online or paper)</li>
+    <li>PSA Birth Certificate</li>
+    <li>Report card or Transcript of Records (TOR)</li>
+    <li>Proof of income (if required)</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually May–July every year</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Criminal Justice Education</li>
+    <li>Criminology</li>
+    <li>Industrial Security Management (ISM)</li>
+    <li>Other CHED-recognized related programs</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <p><strong>Public HEIs:</strong></p>
+  <ul class="prog">
+    <li>₱15,000 per semester (Full Merit)</li>
+    <li>₱7,500 per semester (Half Merit)</li>
+  </ul>
+  <p><strong>Private HEIs:</strong></p>
+  <ul class="prog">
+    <li>₱30,000 per semester (Full Merit)</li>
+    <li>₱15,000 per semester (Half Merit)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Government / Merit-based</p>
+  <p class="subTitle">Campus:</p>
+  <p>South, Camarin, Congress, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Philippine National Police (PNP) Scholarship / Support Programs</h1>
+  <a href="https://pnp.gov.ph/" class="apply-btn">Apply Here</a>
+
+  <div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+    <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Must be a student of Criminal Justice, Criminology, or related fields</li>
+    <li>Good moral character</li>
+    </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+    <li>Application form (contact PNP Education & Training Branch or local PNP station)</li>
+    <li>Report card / Transcript of Records (TOR)</li>
+    <li>Police Clearance</li>
+    <li>Recommendation / endorsement from local police unit or barangay</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+    <p>Dependent on the PNP office issuing the scholarship: check with your local PNP station or PNP headquarters</p>
+  </div>
+  </div>
+
+<div class="right-panel">
+<div class="scrollbar">
+
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Criminal Justice Education</li>
+    <li>Criminology</li>
+    <li>Other related courses approved by PNP</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Partial or full tuition fee assistance</li>
+    <li>Allowance for books and school supplies</li>
+    <li>Uniform or miscellaneous fee support</li>
+    <li>Possible monthly stipend (varies per branch)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Government</p>
+  <p class="subTitle">Campus:</p>
+  <p>South, Camarin</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<div class="left-panel">
+  <h1>Commission on Higher Education (CHED) – Scholarship Program for Future Statisticians & Graduate Scholarships</h1>
+  <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Must meet admission requirements of recognized HEI</li>
+    <li>With strong academic record</li>
+    <li>For teaching or government service (priority fields may apply)</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application form</li>
+      <li>Transcript of Records</li>
+      <li>Admission letter (Graduate School)</li>
+      <li>Recommendation letters</li>
+      <li>Study Plan</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+    <p>Usually March–June</p>
+  </div>
+  </div>
+
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Master’s & Doctorate Programs:</li>
+    <li>Public Administration</li>
+    <li>Educational Management</li>
+    <li>Education majors</li>
+    <li>Master of Business Administration (MBA)</li>
+    <li>Criminal Justice (depending on regional priority)</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+    <p><strong>Master’s Degree:</strong></p>
+    <ul class="prog">
+      <li>Tuition & other school fees – up to ₱60,000 per academic year</li>
+      <li>Monthly living allowance – ₱25,000 per month</li>
+      <li>Book allowance – ₱10,000 per academic year</li>
+      <li>Thesis grant – ₱30,000</li>
+      <li>Transportation allowance (if applicable)</li>
+      <li>Health / accident insurance</li>
+    </ul>
+    <p><strong>Doctorate Degree:</strong></p>
+    <ul class="prog">
+      <li>Tuition & other school fees – up to ₱100,000 per academic year</li>
+      <li>Monthly living allowance – ₱30,000 per month</li>
+      <li>Book allowance – ₱10,000 per academic year</li>
+      <li>Dissertation grant – ₱50,000</li>
+      <li>Transportation allowance (if applicable)</li>
+      <li>Health / accident insurance</li>
+    </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Full / Partial Scholarship</p>
+    <p class="subTitle">Campus:</p>
+    <p>Main, North, Camarin, Bagong Silang</p>
+    <p class="subTitle">Educational Level:</p>
+    <p>Master’s & Doctorate</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Department of Science and Technology (DOST-SEI) – ASTHRDP & CBPSME</h1>
+  <a href="https://sei.dost.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Must enroll in DOST priority graduate programs</li>
+    <li>Must pass university admission requirements</li>
+    <li>No pending administrative/criminal case</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Online application</li>
+    <li>Transcript of Records (TOR)</li>
+    <li>Birth Certificate</li>
+    <li>Admission letter</li>
+    <li>Research Plan</li>
+  </ul>
+    <p class="subTitle">Deadline:</p>
+    <p>Usually March–April (1st Sem) / September–October (2nd Sem)</p>
+</div>
+</div>
+
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Science-related Education (Teaching Science)</li>
+    <li>Criminal Justice (if research-related to science/forensics)</li>
+    <li>Statistics</li>
+    <li>Math-related fields</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Full tuition coverage</li>
+    <li>₱25,000 monthly stipend (Master’s)</li>
+    <li>₱33,000 monthly stipend (PhD)</li>
+    <li>Book allowance</li>
+    <li>Thesis/Dissertation grant</li>
+    <li>Travel grant</li>
+    <li>Insurance</li>
+  </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Full Graduate Scholarship</p>
+    <p class="subTitle">Campus:</p>
+    <p>Main, North, Camarin, Bagong Silang</p>
+    <p class="subTitle">Educational Level:</p>
+    <p>Master’s & PhD</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Civil Service Commission (CSC) – Graduate Scholarship for Government Employees</h1>
+  <a href="https://www.csc.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Permanent government employee</li>
+    <li>At least Very Satisfactory performance rating</li>
+    <li>Endorsed by agency</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application form</li>
+    <li>Service record</li>
+    <li>Performance rating</li>
+    <li>Admission letter</li>
+    <li>Study plan</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually announced annually</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Public Administration (Master’s or Doctorate)</li>
+    <li>Educational Management (Master’s or Doctorate)</li>
+    <li>Criminal Justice (Master’s or Doctorate)</li>
+    <li>Master of Business Administration (MBA)</li>
+    <li>Other related graduate programs</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Tuition Assistance</li>
+    <li>Tuition and miscellaneous fees covered up to ₱50,000 – ₱100,000 per academic year, depending on program and funding availability</li>
+    <li>Book / Learning Materials Allowance – Usually ₱5,000 – ₱10,000 per academic year (depending on agency funding support)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Study Grant</p>
+  <p class="subTitle">Campus:</p>
+  <p>Main, North, Camarin, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Master’s / Doctorate</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- BAGONG SILANG CAMPUS -->
+<div id="BS" class="campus-section">
+  <h1 class="Campus">Bagong Silang</h1>
+  
+<div class="container">
+<div class="left-panel">
+  <h1>University of Caloocan City + Tzu Chi Foundation</h1>
+  <a href="https://ucc-caloocan.edu.ph/post/ucc-strengthens-scholarship-programs-through-partnership-with-tzu-chi-foundation" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Financially challenged students enrolled at UCC</p>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application Form</li>
+    <li>Transcripts</li>
+    <li>Income documents</li>
+    <li>Interview</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually starts in March and ends during April</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Bachelor of Science in Psychology</li>
+    <li>Bachelor of Science in Computer Science</li>
+    <li>Bachelor of Science in Information System</li>
+    <li>Bachelor of Science in Information Technology</li>
+    <li>Bachelor of Science in Entertainment & Multimedia Computing</li>
+    <li>Bachelor of Arts in Political Science</li>
+    <li>Bachelor of Arts in Communication</li>
+    <li>Bachelor in Public Administration</li>
+    <li>Bachelor of Science in Business Administration</li>
+    <li>Bachelor of Science in Accountancy</li>
+    <li>Bachelor of Science in Tourism</li>
+    <li>Bachelor of Science in Hotel & Restaurant Management</li>
+    <li>Bachelor in Elementary Education</li>
+    <li>Bachelor in Secondary Education</li>
+    <li>Bachelor of Science in Criminology</li>
+    <li>BS Electrical Engineering</li>
+    <li>BS Electronics Engineering</li>
+    <li>BS Computer Engineering</li>
+  </ul>
+    <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Tuition subsidy</li>
+      <li>Financial support for low-income students</li>
+    </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Need based</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Caloocan City Government Scholarship Program</h1>
+  <p class="apply-btn">https://ched.gov.ph</p>
+  <div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Filipino citizen</p>
+  <p>Incoming freshman or currently enrolled</p>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application Form</li>
+      <li>Certificate of Residency</li>
+      <li>Transcripts of Record / Report Card</li>
+      <li>Proof of Family Income</li>
+    </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Announced by the city government</p>
+</div>
+</div>
+
+<div class="right-panel">
+  <div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <p>No fixed list</p>
+  <p class="subTitle">Benefits:</p>
+   <ul class="prog">
+    <li>Cash Assistance</li>
+    <li>Educational Aid</li>
+  </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Merit based / Need based</p>
+    <p class="subTitle">Educational Level:</p>
+    <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>CHED Scholarship Program (Business / Accountancy)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Freshman or currently enrolled college student in Business / Accountancy programs</li>
+    <li>Strong academic performance</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application form (online / CHED portal)</li>
+    <li>PSA Birth Certificate</li>
+    <li>Transcript of Records or report card</li>
+    <li>Income proof (if needed)</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually May–July yearly</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+    <ul class="prog">
+      <li>Business Administration</li>
+      <li>Accountancy</li>
+      <li>Financial Management</li>
+      <li>Marketing Management</li>
+      <li>Human Resource Management</li>
+      <li>Other CHED-recognized Business programs</li>
+    </ul>
+  <p class="subTitle">Benefits:</p>
+  <p><strong>Public HEIs:</strong></p>
+  <ul class="prog">
+    <li>₱15,000 per semester (Full Merit)</li>
+    <li>₱7,500 per semester (Half Merit)</li>
+  </ul>
+  <p><strong>Private HEIs:</strong></p>
+  <ul class="prog">
+    <li>₱30,000 per semester (Full Merit)</li>
+    <li>₱15,000 per semester (Half Merit)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Government / Merit-based</p>
+  <p class="subTitle">Campus:</p>
+  <p>South, Camarin, Congress, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>CHED Scholarship Program (All Majors Eligible — incl. Criminal Justice / Criminology / ISM)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/" class="apply-btn">Apply Here</a>
+  
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+    <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Freshman or currently enrolled college student in Criminal Justice / Criminology / Industrial Security Management / related courses</li>
+    <li>Strong academic performance</li>
+    </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Filled application form (online or paper)</li>
+      <li>PSA Birth Certificate</li>
+      <li>Report card or Transcript of Records (TOR)</li>
+      <li>Proof of income (if required)</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually May–July every year</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Criminal Justice Education</li>
+    <li>Criminology</li>
+    <li>Industrial Security Management (ISM)</li>
+    <li>Other CHED-recognized related programs</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <p><strong>Public HEIs:</strong></p>
+  <ul class="prog">
+    <li>₱15,000 per semester (Full Merit)</li>
+    <li>₱7,500 per semester (Half Merit)</li>
+  </ul>
+  <p><strong>Private HEIs:</strong></p>
+  <ul class="prog">
+    <li>₱30,000 per semester (Full Merit)</li>
+    <li>₱15,000 per semester (Half Merit)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Government / Merit-based</p>
+  <p class="subTitle">Campus:</p>
+  <p>South, Camarin, Congress, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Department of Science and Technology – DOST-SEI Undergraduate Scholarship</h1>
+  <a href="https://sei.dost.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>STEM strand graduate (for freshmen) or qualified college student</li>
+    <li>Enrolled in priority programs such as Computer Engineering, Electronics Engineering, Electrical Engineering, and Industrial Engineering</li>
+    <li>Must pass DOST scholarship exam</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Completed online application</li>
+    <li>PSA Birth Certificate</li>
+    <li>SHS Report Card (for freshmen) or Transcript of Records (TOR) for college students</li>
+    <li>Certificate of Good Moral Character</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually August–October annually</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Computer Engineering</li>
+    <li>Electronics Engineering</li>
+    <li>Electrical Engineering</li>
+    <li>Industrial Engineering</li>
+    <li>Other DOST priority Science & Technology programs</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>₱8,000 monthly living allowance</li>
+    <li>₱40,000 per academic year tuition support (for private HEIs)</li>
+    <li>Book allowance: ₱10,000 per year</li>
+    <li>Clothing allowance: ₱1,000 (1st sem, 1st year only)</li>
+    <li>Thesis allowance: ₱10,000</li>
+    <li>Graduation allowance: ₱1,000</li>
+    <li>Group accident insurance</li>
+    <li>For public HEIs like UCC, tuition is free so allowance is the main benefit</li>
+  </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Government / Merit-based</p>
+    <p class="subTitle">Campus:</p>
+    <p>South, Bagong Silang</p>
+    <p class="subTitle">Educational Level:</p>
+    <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Commission on Higher Education – CHED Merit Scholarship Program</h1>
+  <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Strong academic performance</li>
+    <li>Enrolled in Engineering programs (Computer Engineering, Electronics Engineering, Electrical Engineering, Industrial Engineering)</li>
+    <li>Income bracket requirement for some categories</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>Report card or Transcript of Records (TOR)</li>
+    <li>Proof of income</li>
+    <li>Certificate of Good Moral Character</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually May–July (varies per region)</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Computer Engineering</li>
+    <li>Electronics Engineering (ECE)</li>
+    <li>Electrical Engineering (EE)</li>
+    <li>Industrial Engineering (IE)</li>
+    <li>Other CHED-recognized Engineering programs</li>
+    </ul>
+  <p class="subTitle">Benefits:</p>
+    <p><strong>Public HEIs:</strong></p>
+    <ul class="prog">
+      <li>₱15,000 per semester (Full Merit)</li>
+      <li>₱7,500 per semester (Half Merit)</li>
+    </ul>
+    <p><strong>Private HEIs:</strong></p>
+    <ul class="prog">
+      <li>₱30,000 per semester (Full Merit)</li>
+      <li>₱15,000 per semester (Half Merit)</li>
+    </ul>
+    <p class="subTitle">Scholarship Type:</p>
+    <p>Government / Merit-based or Needs-based</p>
+    <p class="subTitle">Campus:</p>
+    <p>South, Bagong Silang</p>
+    <p class="subTitle">Educational Level:</p>
+    <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Commission on Higher Education (CHED) – Scholarship Program for Future Statisticians & Graduate Scholarships</h1>
+  <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Must meet admission requirements of recognized HEI</li>
+    <li>With strong academic record</li>
+    <li>For teaching or government service (priority fields may apply)</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application form</li>
+    <li>Transcript of Records</li>
+    <li>Admission letter (Graduate School)</li>
+    <li>Recommendation letters</li>
+    <li>Study Plan</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually March–June</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Master’s & Doctorate Programs:</li>
+    <li> Public Administration</li>
+    <li> Educational Management</li>
+    <li> Education majors</li>
+    <li> Master of Business Administration (MBA)</li>
+    <li> Criminal Justice (depending on regional priority)</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <p><strong>Master’s Degree:</strong></p>
+  <ul class="prog">
+    <li>Tuition & other school fees – up to ₱60,000 per academic year</li>
+    <li>Monthly living allowance – ₱25,000 per month</li>
+    <li>Book allowance – ₱10,000 per academic year</li>
+    <li>Thesis grant – ₱30,000</li>
+    <li>Transportation allowance (if applicable)</li>
+    <li>Health / accident insurance</li>
+  </ul>
+  <p><strong>Doctorate Degree:</strong></p>
+    <ul class="prog">
+      <li>Tuition & other school fees – up to ₱100,000 per academic year</li>
+      <li>Monthly living allowance – ₱30,000 per month</li>
+      <li>Book allowance – ₱10,000 per academic year</li>
+      <li>Dissertation grant – ₱50,000</li>
+      <li>Transportation allowance (if applicable)</li>
+      <li>Health / accident insurance</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Full / Partial Scholarship</p>
+  <p class="subTitle">Campus:</p>
+  <p>Main, North, Camarin, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Master’s & Doctorate</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Department of Science and Technology (DOST-SEI) – ASTHRDP & CBPSME</h1>
+  <a href="https://sei.dost.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Filipino citizen</li>
+    <li>Must enroll in DOST priority graduate programs</li>
+    <li>Must pass university admission requirements</li>
+    <li>No pending administrative/criminal case</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Online application</li>
+    <li>Transcript of Records (TOR)</li>
+    <li>Birth Certificate</li>
+    <li>Admission letter</li>
+    <li>Research Plan</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually March–April (1st Sem) / September–October (2nd Sem)</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Science-related Education (Teaching Science)</li>
+    <li>Criminal Justice (if research-related to science/forensics)</li>
+    <li>Statistics</li>
+    <li>Math-related fields</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Full tuition coverage</li>
+    <li>₱25,000 monthly stipend (Master’s)</li>
+    <li>₱33,000 monthly stipend (PhD)</li>
+    <li>Book allowance</li>
+    <li>Thesis/Dissertation grant</li>
+    <li>Travel grant</li>
+    <li>Insurance</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Full Graduate Scholarship</p>
+  <p class="subTitle">Campus:</p>
+  <p>Main, North, Camarin, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Master’s & PhD</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+<div class="left-panel">
+  <h1>Civil Service Commission (CSC) – Graduate Scholarship for Government Employees</h1>
+  <a href="https://www.csc.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <ul class="prog">
+    <li>Permanent government employee</li>
+    <li>At least Very Satisfactory performance rating</li>
+    <li>Endorsed by agency</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application form</li>
+    <li>Service record</li>
+    <li>Performance rating</li>
+    <li>Admission letter</li>
+    <li>Study plan</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually announced annually</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Public Administration (Master’s or Doctorate)</li>
+    <li>Educational Management (Master’s or Doctorate)</li>
+    <li>Criminal Justice (Master’s or Doctorate)</li>
+    <li>Master of Business Administration (MBA)</li>
+    <li>Other related graduate programs</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Tuition Assistance</li>
+    <li> Tuition and miscellaneous fees covered up to ₱50,000 – ₱100,000 per academic year, depending on program and funding availability</li>
+    <li>Book / Learning Materials Allowance – Usually ₱5,000 – ₱10,000 per academic year (depending on agency funding support)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Study Grant</p>
+  <p class="subTitle">Campus:</p>
+  <p>Main, North, Camarin, Bagong Silang</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Master’s / Doctorate</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SOUTH CAMPUS -->
+<div id="South" class="campus-section">
+  <h1 class="Campus">South</h1>
+ 
+<div class="container">
+<div class="left-panel">
+  <h1>University of Caloocan City + Tzu Chi Foundation</h1>
+  <a href="https://ucc-caloocan.edu.ph/post/ucc-strengthens-scholarship-programs-through-partnership-with-tzu-chi-foundation" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Financially challenged students enrolled at UCC</p>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application Form</li>
+    <li>Transcripts</li>
+    <li>Income documents</li>
+    <li>Interview</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Usually starts in March and ends during April</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Bachelor of Science in Psychology</li>
+    <li>Bachelor of Science in Computer Science</li>
+    <li>Bachelor of Science in Information System</li>
+    <li>Bachelor of Science in Information Technology</li>
+    <li>Bachelor of Science in Entertainment & Multimedia Computing</li>
+    <li>Bachelor of Arts in Political Science</li>
+    <li>Bachelor of Arts in Communication</li>
+    <li>Bachelor in Public Administration</li>
+    <li>Bachelor of Science in Business Administration</li>
+    <li>Bachelor of Science in Accountancy</li>
+    <li>Bachelor of Science in Tourism</li>
+    <li>Bachelor of Science in Hotel & Restaurant Management</li>
+    <li>Bachelor in Elementary Education</li>
+    <li>Bachelor in Secondary Education</li>
+    <li>Bachelor of Science in Criminology</li>
+    <li>BS Electrical Engineering</li>
+    <li>BS Electronics Engineering</li>
+    <li>BS Computer Engineering</li>
+  </ul>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Tuition subsidy</li>
+      <li>Financial support for low-income students</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Need based</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+  <h1>Caloocan City Government Scholarship Program</h1>
+  <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Filipino citizen, Incoming freshman or currently enrolled, priority to low-income families</p>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Application Form</li>
+    <li>Certificate of Residency</li>
+    <li>Transcripts of Record / Report Card</li>
+    <li>Proof of Family Income</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+  <p>Announced by the city government</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <p>No fixed list</p>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <li>Cash Assistance</li>
+    <li>Educational Aid</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+  <p>Merit based / Need based</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+  <h1>CHED Scholarship Program (Business/Accountancy)</h1>
+  <p class="apply-btn">https://ched.gov.ph</p>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+  <p>Filipino citizen</p> 
+  <p>Freshman or currently enrolled college student in Business/Accountancy programs</p>
+  <p>Strong academic performance</p>
+<p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Filled application form (online or paper)</li>
+    <li>PSA Birth Certificate</li>
+    <li>Report card or Transcript of Records (TOR)</li>
+    <li>Proof of Family Income</li>
+  </ul>
+<p class="subTitle">Deadline:</p>
+<p> Usually May–July every year</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+    <p>No fixed list</p>
+  <p class="subTitle">Benefits:</p>
+  <ul class="prog">
+    <p>For students in Public HEis:</p>
+    <li>₱15,000 per semester (Full Merit)</li>
+    <li>₱7,500 per semester (Half Merit)</li>
+    <p>For students in Private HEIs:</p>
+    <li>₱30,000 per semester (Full Merit)</li>
+    <li>₱15,000 per semester (Half Merit)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+    <p>Government / Merit-based</p>
+  <p class="subTitle">Educational Level:</p>
+  <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="left-panel">
+    <h1>CHED Scholarship Program (All Majors Eligible — incl. Criminology / CJ / ISM)</h2>
+    <p class="apply-btn">https://ched.gov.ph</p>
+    <div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+    <p>Filipino citizen </p>
+    <p> Freshman or currently enrolled college student in Criminal Justice / Criminology / Industrial Security Management / related courses  </p>
+    <p>Strong academic performance</p>
+  <p class="subTitle">Requirements:</p>
+  <ul class="prog">
+    <li>Filled application form (online or paper)</li>
+    <li>PSA Birth Certificate</li>
+    <li>Report card or Transcript of Records (TOR)</li>
+    <li>Proof of Family Income</li>
+  </ul>
+  <p class="subTitle">Deadline:</p>
+    <p> Usually May–July every year</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+    <p>No fixed list</p>
+    <p class="subTitle">Benefits:</p>
+    <ul class="prog">
+    <p>For students in Public HEis:</p>
+      <li>₱15,000 per semester (Full Merit)</li>
+      <li>₱7,500 per semester (Half Merit)</li>
+      <p>For students in Private HEIs:</p>
+      <li>₱30,000 per semester (Full Merit)</li>
+      <li>₱15,000 per semester (Half Merit)</li>
+    </ul>
+  <p class="subTitle">Scholarship Type:</p>
+    <p>Government / Merit-based</p>
+    <p class="subTitle">Educational Level:</p>
+    <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+    <h1>Philippine National Police (PNP) Scholarship / Support Programs</h2>
+    <p class="apply-btn"> https://pnp.gov.ph/</p>
+
+<div class="scrollbar">
+  <p class="subTitle">Eligibility:</p>
+    <p>Filipino citizen</p>
+    <p>Must be a student of Criminal Justice, Criminology, or related fields</p>
+    <p>Good moral character</p>
+  <p class="subTitle">Requirements:</p>
+    <ul class="prog">
+      <li>Application form (contact PNP Education & Training Branch or local PNP station)</li>
+      <li>Police Clearance</li>
+      <li>Transcripts of Record / Report Card</li>
+      <li>Recommendation / endorsement from local police unit or barangay</li>
+    </ul>
+  <p class="subTitle">Deadline:</p>
+    <p>Dependent on the PNP office issuing the scholarship: check with your local PNP station or PNP headquarterst</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+   <ul class="prog">
+    <li>Criminal Justice Educ</li>
+  </ul>
+  <p class="subTitle">Benefits:</p>
+   <ul class="prog">
+    <li>Partial or full tuition fee assistance</li>
+    <li>Allowance for books and school supplies</li>
+    <li>Uniform or miscellaneous fee support</li>
+    <li>Possible monthly stipend (varies per branch)</li>
+  </ul>
+  <p class="subTitle">Scholarship Type:</p>
+    <p>Government</p>
+  <p class="subTitle">Educational Level:</p>
+    <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="left-panel">
+    <h1>Department of Education (DepEd) – Teacher Education Scholarship Support</h2>
+    <p class="apply-btn"> https://www.deped.gov.ph</p>
+    <div class="scrollbar">
+    <p class="subTitle">Eligibility:</p>
+      <p>Filipino citizen </p>
+      <p> Enrolled in Teacher Education programs (BSED / BEED / Early Childhood Education)</p>
+      <p> Good academic standing</p>
+      <p> Willing to serve in Philippine schools after graduation (for some programs)</p>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Proof of enrollment</li>
+        <li>Grades/TOR</li>
+        <li>Recommendation letter</li>
+        <li>Application form</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually announced before start of academic year (based on previous cycles)</p>
+</div>
+</div>
+
+<div class="right-panel">
+<div class="scrollbar">
+  <p class="subTitle">Program</p>
+  <ul class="prog">
+    <li>Education</li>
+    <li>BSED, Eng</li>
+    <li>BSED, Sci</li>
+    <li>BSED, TLE</li>
+    <li>Early Childhood Educ</li>
+</ul>
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <li>Tuition and school fee assistance (for private institutions)</li>
+        <li>For public universities like UCC: financial assistance given as stipend</li>
+        <li>₱3,000 – ₱8,000 monthly living allowance (depending on budget allocation)</li>
+        <p>OR</p>
+        <li>₱10,000 – ₱20,000 per semester financial grant</li>
+        <li>₱3,000 – ₱5,000 annual book allowance</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left-panel">
+    <h1>Department of Science and Technology – DOST-SEI Undergraduate Scholarship</h2>
+
+    <p class="apply-btn">  https://sei.dost.gov.ph/</p>
+    <div class="scrollbar">
+    <p class="subTitle">Eligibility:</p>
+      <p> Filipino citizen</p>
+      <p> STEM strand graduate (for freshmen) or qualified college student</p>
+      <p> Enrolled in priority programs such as Computer Engineering, Electronics Engineering, Electrical Engineering, and Industrial Engineering</p>
+      <p> Must pass DOST scholarship exam</p>
+    <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Completed online application</li>
+        <li>PSA Birth Certificate</li>
+        <li>SHS Report Card (for freshmen) or TOR (for college students)</li>
+        <li>Certificate of Good Moral Character</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p> Usually August–October annually</p>
+</div>
+</div>
+
+  <div class="right-panel">
+    <div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+         <li>Engineering</li>
+         <li>Comp Eng</li>
+         <li>Electronics Eng</li>
+         <li>Electrical Eng</li>
+         <li>Industrial Eng</li>
+      </ul>
+
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <li>₱8,000 monthly living allowance</li>
+      <li>₱40,000 per academic year tuition support (for private HEIs)</li>
+      <li>Book allowance: ₱10,000 per year</li>
+      <li>Clothing allowance: ₱1,000 (1st sem, 1st year only)</li>
+      <li>Thesis allowance: ₱10,000</li>
+      <li>Graduation allowance: ₱1,000</li>
+      <li>Group accident insurance</li>
+      (For public HEIs like UCC, tuition is usually covered under the ₱40,000 cap but since UCC is free tuition, allowance is the main benefit.)
+      </li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Merit-based</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="left-panel">
+    <h1>Commission on Higher Education – CHED Law Education Scholarship Program (LESP)</h2>
+    <p class="apply-btn">https://ched.gov.ph</p>
+    <div class="scrollbar">
+    <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Filipino citizen</li>
+        <li>Admitted or currently enrolled in a Juris Doctor (JD) or Law program</li>
+        <li>Enrolled in a CHED-recognized law school</li>
+        <li>Meets academic and income requirements</li>
+      </ul>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Filled application form (online or paper)</li>
+        <li>PSA Birth Certificate</li>
+        <li>Report card or Transcript of Records (TOR)</li>
+        <li>Proof of Family Income</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p> Usually May–July every year</p>
+  </div>
+  </div>
+
+ <div class="right-panel">
+ <div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li>Law</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <p>For students in Public HEis:</p>
+        <li>₱15,000 per semester (Full Merit)</li>
+        <li>₱7,500 per semester (Half Merit)</li>
+        <p>For students in Private HEIs:</p>
+        <li>₱30,000 per semester (Full Merit)</li>
+        <li>₱15,000 per semester (Half Merit)</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Merit-based andNeeds-based</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Freshman & Current College Students</p>
+</div>
+</div>
+</div>
+   
+<div class="container">
+  <div class="left-panel">
+    <h1>Commission on Higher Education (CHED) – Student Financial Assistance Programs (StuFAPs)</h1>
+    <a href="https://ched.gov.ph" class="apply-btn">Apply Here</a>
+
+    <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Filipino citizen</li>
+        <li>Senior high school graduate or currently enrolled in college</li>
+        <li>Combined annual gross income of parents/guardian must not exceed CHED limits</li>
+        <li>Must enroll in recognized public or private HEIs</li>
+      </ul>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Application form</li>
+        <li>Report Card / Grades</li>
+        <li>Certificate of Indigency or Income Tax Return</li>
+        <li>Birth Certificate</li>
+        <li>Certificate of Good Moral Character</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually between March–July (varies per region)</p>
+</div>
+</div>
+
+
+  <div class="right-panel">
+    <div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li>Open to all CHED-recognized undergraduate programs</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <li>Tuition & other school fees</li>
+        <li>Full: up to ₱40,000 per year</li>
+        <li>Partial: up to ₱20,000 per year</li>
+        <li>Book allowance</li>
+        <li>Monthly stipend</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Need-based (Full or Partial Scholarship)</p>
+      <p class="subTitle">Campus:</p>
+      <p>South, Congress</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Undergraduate</p>
+</div>
+</div>
+</div>
+
+ <div class="container">
+  <div class="left-panel">
+    <h1>Government Service Insurance System (GSIS) – Educational Subsidy Program (ESP)</h1>
+    <a href="https://www.gsis.gov.ph" class="apply-btn">Apply Here</a>
+
+    <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Child/dependent of active GSIS member</li>
+        <li>Incoming 1st–5th year college</li>
+        <li>Good academic standing</li>
+      </ul>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Application form</li>
+        <li>Proof of GSIS membership</li>
+        <li>Grades</li>
+        <li>Birth Certificate</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually June–July</p>
+  </div>
+  </div>
+
+  <div class="right-panel">
+    <div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li><strong>Undergraduate:</strong> Open to eligible college programs</li>
+        <li><strong>Graduate School:</strong></li>
+        <li>Doctor in Public Administration</li>
+        <li>Doctor of Philosophy, Major in Educational Management</li>
+        <li>Master in Public Administration</li>
+        <li>Master of Arts in Education, Major in Educational Management</li>
+        <li>Master of Arts in Education, Major in Teaching in the Early Grades</li>
+        <li>Master of Arts in Education, Major in Teaching Science</li>
+        <li>Master of Business Administration</li>
+        <li>Master of Science in Criminal Justice, Major in Criminology</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <li>₱10,000 – ₱20,000 annual financial assistance</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Government / Scholarship Grant</p>
+      <p class="subTitle">Campus:</p>
+      <p>South, Congress</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>College Students</p>
+</div>
+</div>
+</div>
+   
+ <div class="container">
+  <div class="left-panel">
+    <h1>Civil Service Commission (CSC) – Graduate Scholarship for Government Employees</h1>
+    <a href="https://www.csc.gov.ph" class="apply-btn">Apply Here</a>
+
+    <div class="scrollbar">
+      <p class="subTitle">Eligibility:</p>
+      <ul class="prog">
+        <li>Permanent government employee</li>
+        <li>At least Very Satisfactory performance rating</li>
+        <li>Endorsed by agency</li>
+      </ul>
+      <p class="subTitle">Requirements:</p>
+      <ul class="prog">
+        <li>Application form</li>
+        <li>Service record</li>
+        <li>Performance rating</li>
+        <li>Admission letter</li>
+        <li>Study plan</li>
+      </ul>
+      <p class="subTitle">Deadline:</p>
+      <p>Usually announced annually</p>
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <div class="scrollbar">
+      <p class="subTitle">Program</p>
+      <ul class="prog">
+        <li>Public Administration (Master’s or Doctorate)</li>
+        <li>Educational Management (Master’s or Doctorate)</li>
+        <li>Criminal Justice (Master’s or Doctorate)</li>
+        <li>Master of Business Administration (MBA)</li>
+        <li>Other related graduate programs</li>
+      </ul>
+      <p class="subTitle">Benefits:</p>
+      <ul class="prog">
+        <li>Tuition Assistance</li>
+        <li> Tuition and miscellaneous fees covered up to ₱50,000 – ₱100,000 per academic year, depending on program and funding availability</li>
+        <li>Book / Learning Materials Allowance – Usually ₱5,000 – ₱10,000 per academic year (depending on agency funding support)</li>
+      </ul>
+      <p class="subTitle">Scholarship Type:</p>
+      <p>Study Grant</p>
+      <p class="subTitle">Campus:</p>
+      <p>Main, North, Camarin, Bagong Silang,</p>
+      <p class="subTitle">Educational Level:</p>
+      <p>Master’s / Doctorate</p>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <h2>Sirmata.com</h2>
+    <p>Empowering students through opportunity.</p>
+    <div class="footer-links">
+      <a href="#">Apply Now</a> |
+      <a href="#">Eligibility</a> |
+      <a href="#">Contact</a>
+    </div>
+    <address>
+      questions@sirmata.com <br>
+      123 Education St.
+    </address>
+    <p class="copyright">&copy; 2026 University of Caloocan City</p>
+  </div>
+</footer>
+
+</body>
+</html>
+

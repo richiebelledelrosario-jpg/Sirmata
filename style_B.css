@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(assets/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  scrollbar-color: white transparent;
+  scrollbar-width: thin;
+}
+
+h1 {
+  font-family: "League Spartan", sans-serif;
+  margin: auto;
+  align-items: center;
+  color: #fbfcff;
+}
+
+h4 {
+  font-family: "League Spartan", sans-serif;
+  margin-left: 5%;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+li {
+  font-size: large;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 0%;
+  color: #f4b400;
+  font-family: "League Spartan", sans-serif;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.Title {
+  font-family: "League Spartan", sans-serif;
+  color: #f1f0f0;
+  margin-left: 20px;
+  font-weight: 700;
+}
+.yellow {
+  color: #f2bd2c;
+  font-size: 20px;
+  font-weight: 700;
+}
+li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+.details h3,
+.box-content h3 {
+  color: #f4b400;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "League Spartan", sans-serif;
+  text-decoration: underline;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001c55;
+  padding: 0 30px;
+  width: 97%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.sirmata {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1d1d1e;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f4b400;
+  letter-spacing: 1px;
+  font-family: "League Spartan", sans-serif;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5f7fa;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 18px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #f4b400;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.arrow {
+  font-size: 10px;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.dropdown-parent:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #001c55;
+  min-width: 180px;
+  padding: 4px 0;
+  border-radius: 0 0 6px 6px;
+  border-top: 2px solid #f4b400;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.dropdown-parent:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  display: block;
+}
+
+.dropdown li a {
+  height: auto;
+  padding: 11px 18px;
+  font-size: 13px;
+}
+
+.dropdown li a:hover {
+  background: #112c66;
+  color: #f4b400;
+}
+
+
+  .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  z-index: 1100;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f5f7fa;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4b400;
+}
+
+.nav-left-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* ── SEARCH BAR ── */
+.search-wrap{
+  position:relative;
+}
+
+.search-bar{
+  display:none;
+  position:absolute;
+  top:120%;
+  right:0;
+
+  width:280px;
+  padding:10px;
+  background:#001c55;
+  border-top:2px solid #f4b400;
+  border-radius:0 0 8px 8px;
+
+  box-shadow:0 6px 15px rgba(0,0,0,.25);
+  z-index:9999;
+
+  gap:8px;
+  align-items:center;
+}
+
+.search-bar.open{
+  display:flex;
+}
+
+.search-bar input{
+  flex:1;
+  padding:8px 10px;
+  border:none;
+  border-radius:4px;
+  outline:none;
+}
+
+.search-bar button{
+  padding:8px 12px;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:bold;
+}
+#searchGo {
+  color:#ebecee;
+  background: none;
+
+}
+#searchGo:hover {
+  color: #f4b400;
+}
+
+/* ── ACCOUNT DROPDOWN ── */
+.acct-wrap {
+  position: relative;
+}
+
+.acct-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left:auto;
+  background: #001c55;
+  min-width: 160px;
+  width: 180px;
+  max-width: 90vw;
+  padding: 4px 0;
+  border-radius: 0 0 8px 8px;
+  border-top: 2px solid #f4b400;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 2000;
+}
+
+.acct-menu.open {
+  display: block;
+}
+
+.acct-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  color: #f5f7fa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.acct-menu a:hover {
+  background: #112c66;
+  color: #f4b400;
+}
+
+.acct-menu .divider {
+  border: none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.15);
+  margin: 3px 0;
+}
+
+/* Individual Icon Button Styling */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f5f7fa;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4b400; /* Sirmata Gold */
+}
+
+/* Dropdown Alignment for Left-Side Icons */
+/* We force the menus to align to the left edge of the icon */
+.search-bar,
+.acct-menu {
+  position: absolute;
+  top: 100%;
+  right: 0; /* aligns to the icon */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* 5. SECONDARY NAVIGATION (Pill Navbar) */
+.navbar_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;              
+  margin: 20px auto;     
+  margin-top: 100px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-radius: 20px;      
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar_2:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.sorting-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sorting-list li {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.sorting-list > li > a {
+  color: #f4b400;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sorting-list li:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #ccc;
+}
+
+/* 6. SORTING DROPDOWN SPECIFICS */
+.sorting .dropdown-child {
+  position: relative;
+  text-align: center;
+}
+
+.sorting .dropitout {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  padding: 5px 0;
+  border-radius: 5px;
+  list-style: none;
+  z-index: 999;
+}
+
+.sorting .dropdown-child:hover .dropitout {
+  display: block;
+}
+
+.sorting .dropitout li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sorting .dropitout li a:hover {
+  background: #555;
+  color: #f4b400;
+}
+
+/* 7. BUTTONS & ACTIONS */
+.apply-btn {
+  display: inline-block;
+  background-color: #f4b400;
+  color: #001c55 !important;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  font-family: "League Spartan", sans-serif;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.apply-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+.logout-btn {
+  text-decoration: none;
+  color: #f5f7fa;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #f4b400 !important;
+}
+
+/* 8. LAYOUT: GRID (The "All" Section) */
+.All {
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  width: 90%;
+  margin: 100px auto 30px auto;
+  margin-top:30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#vertical {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  height: 80px;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #f5f1f1;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.square {
+  grid-row: 2;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #f5f1f1;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  height: 180px;
+  padding: 15px;
+}
+
+#horizontal {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  border-radius: 20px;
+  overflow-y: auto;
+  height: 300px;
+  color: #f5f1f1; 
+}
+
+/* Scrollbar styling for horizontal div */
+#horizontal::-webkit-scrollbar {
+  width: 8px;
+}
+
+#horizontal::-webkit-scrollbar-thumb {
+  background: #f4b400;
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+/* hover state */
+#horizontal::-webkit-scrollbar-thumb:hover {
+  background: #f4b400;  
+  filter: brightness(1.1);
+}
+
+#horizontal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-block: 20px;
+}
+
+
+/* 9. LAYOUT: FLEX BOXES & SECTIONS */
+.Scholarships-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.active-section {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+}
+
+.box {
+  background: linear-gradient(135deg, #1a2c8e, #bfcae8);
+  margin: 40px auto;
+  width: 85%;
+  min-height: 410px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.box ul {
+  margin-bottom: 20px;
+}
+
+.box h1, .box h2, .box h3 {
+  margin-top: 0;
+}
+
+.box h2 {
+  margin-bottom: 10px;
+}
+
+.box div {
+  margin-top: auto;
+}
+
+.images {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* KEY FIX: remove default UL spacing */
+.images ul {
+  margin: 0;
+  padding-left: 20px;
+  flex: 1;
+}
+
+/* tighten list spacing */
+.images li {
+  margin-bottom: 6px;
+}
+
+/* image stays right */
+.images img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* keep styling */
+.yellow {
+  color: #f2bd2c;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 10. FOOTER */
+footer {
+  width: 98%;
+  height: auto;
+  background-color: #001c55;
+  clip-path: ellipse(100% 100% at 50% 100%);
+  padding: 60px 15px 20px 15px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content h2 {
+  margin-top: 0;
+  color: #fdbb2d;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+address {
+  margin-top: 15px;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+/* 11. MEDIA QUERIES (Responsive Design) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #001c55;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* LOG OUT */
+.logout-modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.logout-box{
+  background: white;
+  width: 320px;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  animation: popUp 0.3s ease;
+}
+
+.logout-icon{
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.logout-box h2{
+  margin: 0;
+  color: #001c55;
+}
+
+.logout-box p{
+  color: #666;
+  margin: 15px 0 25px;
+}
+
+.logout-buttons{
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-btn,
+.logout-btn{
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn{
+  background: #e5e7eb;
+}
+
+.logout-btn{
+  background: #001c55;
+  color: white;
+}
+
+.logout-btn:hover{
+  background: #003399;
+}
+
+@keyframes popUp{
+  from{
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}

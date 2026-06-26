@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student</title>
+<link rel="stylesheet" href="style_3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<script src="script_3.js" defer></script>
+</head>
+<body>
+  
+<nav class="navbar">
+
+    <!-- LEFT: Logo + Brand Name -->
+    <div class="sirmata">
+      <div class="logo">
+        <img src="assets/logo_2.png" alt="SIRMATA Logo">
+
+      </div>
+      <div class="brand-name">SIRMATA</div>
+    </div>
+
+    <!-- CENTER: Nav Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="frontpage.html">Home</a></li>
+      <li class="dropdown-parent">
+        <a href="#">Scholarships <span class="arrow">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="Page2.html">Campus</a></li>
+          <li><a href="Page4.html">College</a></li>
+          <li><a href="Page3.html">Scholarship Type</a></li>
+        </ul>
+      </li>
+      <li><a href="Page5.html">About Us</a></li>
+    </ul>
+
+    <!-- RIGHT: Search + Account Icons -->
+    <div class="nav-right">
+
+       <!-- Search -->
+<div class="search-wrap">
+
+  <button class="icon-btn" id="searchBtn">
+    <span class="material-symbols-outlined">search</span>
+  </button>
+
+  <div class="search-bar" id="searchBar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search scholarships..."
+    >
+    <button id="searchGo">Go</button>
+  </div>
+
+</div>
+
+<!-- Account -->
+<div class="acct-wrap">
+
+  <!-- Profile Button -->
+  <button class="icon-btn" id="acctBtn" title="Account" onclick="toggleAcct()">
+    <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+  <div class="acct-menu" id="acctMenu">
+
+    <!-- My Dashboard -->
+    <a href="trial.html">
+      <span class="material-symbols-outlined">dashboard</span>
+      My Dashboard
+    </a>
+
+    <hr class="divider">
+
+    <!-- Log Out -->
+ <a href="#" onclick="logOut(event)">
+  <span class="material-symbols-outlined">logout</span>
+  Log Out
+</a>
+
+  </div>
+</div>
+        </div>
+  </nav>
+
+<!-- Logout Modal — outside navbar -->
+<div id="logoutModal" class="logout-modal">
+  <div class="logout-box">
+    <div class="logout-icon">
+      <span class="material-symbols-outlined">logout</span>
+    </div>
+    <h2>Log Out?</h2>
+    <p>Are you sure you want to end your current session?</p>
+    <div class="logout-buttons">
+      <button class="cancel-btn" onclick="cancelLogout()">Stay</button>
+      <button class="logout-btn" onclick="confirmLogout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="sorting">
+<nav class="navbar_2">
+<ul class="sorting-list">
+<li class="dropdown-child">
+<a href="#">Scholarships</a>
+<ul class="dropitout">
+<li><a href="#" onclick="showSection('merit');">Merit-Based</a></li>
+<li><a href="#" onclick="showSection('needs');">Needs-Based</a></li>
+<li><a href="#" onclick="showSection('govt');">Government-Funded</a></li>
+<li><a href="#" onclick="showSection('private');">Private-Based</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+
+
+<section class="box active-section">
+<h1 class="Title">Scholarship Types</h1>
+
+<div class="images">
+<ul>
+    <li class="yellow">Merit-Based</li>
+        These awards recognize students with outstanding academic records or special talents. <br>
+        They provide financial support to help high-achievers reach their full potential.
+    <li class="yellow">Needs-Based</li>
+        This aid is designed for students who require financial assistance to cover their education. <br>
+        It ensures that every student has a fair chance to study regardless of their budget.
+    <li class="yellow">Government Funded</li>
+        These programs use public funds to make schooling more affordable for citizens. <br>
+        They represent a community investment in the future of the country’s workforce.
+    <li class="yellow">Private Sponsorship</li>
+        These are grants provided by companies or individuals to support a student's career goals. <br>
+        They often open doors for future employment and professional networking.
+</ul>
+<img src="assets/WebLogo.png">
+</div>
+</section>
+
+
+<div id="merit" class="Scholarships-section">
+<h1 class="title">MERIT-BASED SCHOLARSHIPS</h1>
+
+<div class="All">
+  <div id="vertical">
+  <div class="details">
+    <h1>CHED Merit Scholarship Program</h1>
+    <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+  <li>Filipino citizen</li>
+  <li>Strong academic performance</li>
+  <li>Enrolled in CHED-recognized HEI</li>
+  <li>Income bracket applies for some categories</li>
+  </ul>
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+    <ul>
+    <li>Application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>Transcript of Records/Report Card</li>
+    <li>Certificate of Enrollment</li>
+    <li>Income documents</li>
+    </ul>
+</div>
+</div>
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+    <ul>
+    <li>BS Accountancy</li>
+    <li>Business</li>
+    <li>Engineering</li>
+    <li>Education</li>
+    <li>Law</li>
+    <li>CLAS</li>
+    </ul>
+  <h3>Benefits:</h3>
+    <ul>
+    <li>₱15,000–₱30,000 per semester</li>
+    </ul>
+  <h3>Campus:</h3>
+    <ul>
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Congress Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+    </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>CHED State Scholarship Program (SSP)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>High academic performance</li>
+    <li>Family income ≤ ₱400,000/year</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+    <ul>
+    <li>Application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>Transcript of Records</li>
+    <li>Certificate of Good Moral Character</li>
+    <li>Proof of income</li>
+    </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>BS Information Technology</li>
+    <li>BS Information System</li>
+    <li>BS Computer Science</li>
+    <li>Engineering</li>
+    <li>Social Sciences</li>
+    <li>Business</li>
+    <li>Education</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Free tuition + ₱20,000–₱40,000 stipend yearly</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Congress Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+   <h1>DOST-SEI Undergraduate Scholarship</h1>
+    <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+   <li>Filipino citizen</li>
+    <li>STEM Senior High School graduate</li>
+    <li>Must pass DOST-SEI exam</li>
+  </ul>
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Online application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>SHS Report Card/TOR</li>
+    <li>Certificate of Good Moral Character</li>
+  </ul>
+</div>
+</div>
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>  
+    <li>BS Computer Science</li>
+    <li>BS Information Technology</li>
+    <li>BSEd Science</li>
+    <li>Engineering</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>₱8,000 monthly allowance</li>
+    <li>₱40,000 tuition support</li>
+    <li>Book/clothing/thesis allowance</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Congress Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>CHED Private Education Student Financial Assistance</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>  
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>    
+    <li>Filipino Citizen</li>
+    <li>Strong Academic Performance</li>
+    <li>Enrolled in CHED-recognized HEI</li>
+    <li>Low Income</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>    
+    <li>Application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>Transcript of Records/Report Card </li>
+    <li>Good Moral</li>
+    <li>Certificate of Enrollment </li>
+    <li>Income documents</li>
+  </ul>        
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Program:</h3>
+  <ul>  
+   <li>BS Computer Science</li>
+   <li>BS Information Technology</li>
+   <li>BSEd Science</li>
+   <li>BSEd Math</li>
+   <li>BS Mathematics</li>
+   <li>Engineering</li>
+  </ul>
+  <h3> Benefits:</h3>
+  <ul>    
+   <li>Full: ₱20,000 tuition + ₱40,000 stipend;</li>
+   <li>Half: ₱10,000 tuition + ₱20,000 stipend</li>
+  </ul>
+  <h3>Campus</h3>
+  <ul>    
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Congress Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+<br>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>CHED Graduate Scholarship (Masters and Doctorate) </h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>                  
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>    
+    <li>Filipino Citizen</li>
+    <li>Admitted to Graduate School</li>
+    <li>Strong Academic Record</li>
+    <li>priority for teaching/government service</li>
+  </ul>
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>    
+    <li>Application form</li>
+    <li>PSA Birth Certificate</li>
+    <li>Transcript of Records</li>
+    <li>Admission letter</li>
+    <li>Recommendation letter</li>
+    <li>Study plan</li>
+  </ul>
+</div>
+</div>
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Program:</h3>
+  <ul>  
+   <li>BS Public Administration</li>
+   <li>Education</li>
+   <li>MBA</li>
+   <li>Criminal Justice</li>
+  </ul>
+  <h3> Benefits:</h3>
+  <ul>    
+    <li>Master’s: Tuition up to ₱60k/year + ₱25k monthly allowance</li>
+    <li>PhD: Tuition up to ₱100k/year + ₱30k monthly allowance</li>
+  </ul>
+  <h3>Campus</h3>
+  <ul>    
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Congress Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>DOST Junior Level Science Scholarship (JLSS)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Regular 2nd-year STEM student</li>
+    <li>No failing grade</li>
+    <li>Must pass JLSS exam</li>
+  </ul>                  
+</div>
+</div>
+
+<div class="square">
+<div class="details">                    
+  <h1>Requirements</h1>
+  <ul>
+    <li>Online application form</li>
+    <li>Transcript of Records</li>
+    <li>Certificate of Enrollment</li>
+    <li>PSA Birth Certificate</li>
+    <li>School ID</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>BS Computer Science</li>
+    <li>BS Information Technology</li>
+    <li>Engineering</li>
+    <li>BSEd Science</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+   <li>₱7,000 monthly allowance</li>
+   <li>Tuition up to ₱40,000</li>
+   <li>Book and thesis allowance</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+   <li>UCC South Campus</li>
+   <li>UCC Camarin Campus</li>
+   <li>UCC Congress Campus</li>
+   <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>DOST Graduate Scholarships (ASTHRDP, CBPSME)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>                    
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Admitted to DOST-priority graduate programs</li>
+    <li>No pending case</li>
+  </ul>             
+</div>
+</div>
+
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Online application form</li>
+    <li>Transcript of Records</li>
+    <li>PSA Birth Certificate</li>
+    <li>Admission letter</li>
+    <li>Research plan</li>
+  </ul>                    
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>BSEd Science</li>
+    <li>BSEd in Mathematics</li>
+    <li>BS Mathematics</li>
+    <li>Criminal Justice</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Master’s: ₱25,000 monthly allowance</li>
+    <li>PhD: ₱33,000 monthly allowance</li>
+    <li>Tuition, book, thesis, and travel support</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Main Campus</li>
+    <li>UCC North Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="needs" class="Scholarships-section">
+<h1 class="title">NEEDS-BASED SCHOLARSHIPS</h1>
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>UCC + Tzu Chi Foundation Scholarship</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+   <li>Financially challenged UCC student</li>
+  </ul>  
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Transcript of Records</li>
+    <li>Income documents</li>
+    <li>Interview</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>BS Psychology</li>
+    <li>BS information System</li>
+    <li>BS Computer Science</li>
+    <li>BS Political Science</li>
+    <li>Business</li>
+    <li>Education</li>
+    <li>Criminology</li>
+    <li>Engineering</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Tuition subsidy</li>
+    <li>Financial support</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<br>
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>Caloocan City Governement Scholarship Program</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>    
+    <li>Bonafide resident of Caloocan City</li>
+    <li>Good academic standing</li>
+    <li>Priority for low-income families</li>
+  </ul>              
+</div>
+</div>
+
+
+
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>    
+    <li>Must submit application form</li>
+    <li>Certificate of Residency</li>
+    <li>Proof of Family Income</li>
+    <li>Transcript/Report</li>
+    <li>Income documents</li>
+    <li>Attend interview</li>
+  </ul>        
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Program:</h3>
+  <ul>    
+   <li>All Programs</li>    
+  </ul>
+  <h3> Benefits:</h3>
+  <ul>    
+    <li>Cash Assistance</li>
+    <li>Educational Aid</li>
+  </ul>
+  <h3>Campus</h3>
+  <ul>    
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Congress Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>GSIS Educational Subsidy Program (ESP/GESP)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>                    
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Child or dependent of GSIS member</li>
+    <li>Enrolled in college</li>
+    <li>Good academic standing</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Proof of GSIS membership</li>
+    <li>Grades/Transcript</li>
+    <li>Birth Certificate</li>
+  </ul>  
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>Any 4–5 year course</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>₱10,000–₱20,000 annual assistance</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC South Campus</li>
+    <li>UCC Congress Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>UniFAST TES/TDP</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>            
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Enrolled in SUC, LUC, or CHED-recognized private HEI</li>
+    <li>Low-income family background</li>
+  </ul>                              
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>All programs</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>TES: ₱20,000–₱27,000 per year</li>
+    <li>TDP: ₱7,500 per semester</li>
+  </ul>
+  <h3>Requirements</h3>
+  <ul>
+    <li>TES/TDP application form</li>
+    <li>Certificate of Enrollment</li>
+    <li>PSA Birth Certificate</li>
+    <li>Income documents</li>
+    <li>Barangay Certificate of Residency</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>OWWA EDSP/ODSP</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>                          
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Child of active OFW</li>
+    <li>Good academic standing</li>
+    <li>Age ≤ 21 years old (for EDSP)</li>
+  </ul>                          
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>OWWA application form</li>
+    <li>Enrollment certificate</li>
+    <li>Proof of OFW membership</li>
+    <li>Birth Certificate</li>
+    <li>Copy of OFW contract</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>All programs</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>EDSP: ₱60,000 per year</li>
+    <li>ODSP: ₱20,000 per year</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>DSWD Educational Assistance</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Financially challenged student</li>
+    <li>Currently enrolled in school</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Valid ID</li>
+    <li>Income documents</li>
+    <li>Enrollment certificate</li>
+  </ul>                          
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>No specific priority</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Cash aid for school expenses</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>Nationwide</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>LGU Scholarship (Caloocan)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Bonafide resident of Caloocan City</li>
+    <li>Good academic standing</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Barangay Certificate of Residency</li>
+    <li>Grades/Report Card</li>
+    <li>Enrollment certificate</li>
+    <li>Birth Certificate</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>Applicable for all programs</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>₱5,000–₱30,000 per year</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="govt" class="Scholarships-section">
+ <h1 class="title">GOVERMENT-FUNDED SCHOLARSHIPS</h1>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>DepEd Teacher Education Scholarship</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Enrolled in Teacher Education program</li>
+    <li>Good academic standing</li>
+    <li>Willing to serve in public schools</li>
+  </ul>
+</div>
+</div>
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Proof of enrollment</li>
+    <li>Transcript of Records</li>
+    <li>Recommendation letter</li>
+    <li>Application form</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>BSED</li>
+    <li>BEED</li>
+    <li>Early Childhood Education</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Tuition assistance</li>
+    <li>₱3,000–₱8,000 monthly allowance</li>
+    <li>Book allowance</li>
+    <li>Internship support</li>
+    <li>Priority hiring</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>South</li>
+    <li>Congress</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>PNP Scholarship</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>                    
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Enrolled in Criminology or Criminal Justice program</li>
+    <li>Good moral character</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Transcript of Records</li>
+    <li>Police Clearance</li>
+    <li>Recommendation letter</li>
+  </ul>
+  </div>
+  </div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>BS Criminology</li>
+    <li>Criminal Justice</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Tuition assistance</li>
+    <li>Allowance for books and uniforms</li>
+    <li>Possible stipend</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC South Campus</li>
+    <li>UCC Camarin Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>OWWA EDSP/ODSP</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>                
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Child of active OFW</li>
+    <li>Good academic standing</li>
+    <li>Age ≤ 21 years old (for EDSP)</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>OWWA application form</li>
+    <li>Enrollment certificate</li>
+    <li>Proof of OFW membership</li>
+    <li>Birth Certificate</li>
+    <li>Copy of OFW contract</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>All programs</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>EDSP: ₱60,000 per year</li>
+    <li>ODSP: ₱20,000 per year</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>DSWD Educational Assistance</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Financially challenged student</li>
+    <li>Currently enrolled in school</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Valid ID</li>
+    <li>Income documents</li>
+    <li>Enrollment certificate</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>All Programs</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Cash aid for school expenses</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>LGU Scholarship (Caloocan)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Bonafide resident of Caloocan City</li>
+    <li>Good academic standing</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Barangay Certificate of Residency</li>
+    <li>Grades/Report Card</li>
+    <li>Enrollment certificate</li>
+    <li>Birth Certificate</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>No specific priority</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>₱5,000–₱30,000 per year</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Congress Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC South Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>CSC Graduate Scholarship (Government Employees)</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligibility</h3>
+  <ul>
+    <li>Permanent government employee</li>
+    <li>Endorsed by agency head</li>
+    <li>Good performance rating</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Service record</li>
+    <li>Performance rating</li>
+    <li>Admission letter</li>
+    <li>Study plan</li>
+  </ul>
+</div>
+</div>
+                         
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+   <ul>
+    <li>BS Public Administration</li>
+    <li>Educational Management</li>
+    <li>MBA</li>
+    <li>Criminal Justice</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Tuition ₱50,000–₱100,000 per year</li>
+    <li>₱5,000–₱10,000 book allowance</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+    <li>UCC Main Campus</li>
+    <li>UCC North Campus</li>
+    <li>UCC Camarin Campus</li>
+    <li>UCC Bagong Silang Campus</li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="private" class="Scholarships-section">
+ <h1 class="title">PRIVATE SCHOLARSHIPS</h1>
+<div class="All">
+<div id="vertical">
+<div class="details">
+  <h1>Ayala Foundation Scholarship</h1>
+  <a href="https://ched.gov.ph/merit-scholarship/"class="apply-btn">APPLY HERE</a>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Eligible</h3>
+  <ul>
+    <li>Filipino citizen</li>
+    <li>Good academic standing</li>
+    <li>Financial need</li>
+  </ul>
+</div>
+</div>
+
+<div class="square">
+<div class="details">
+  <h3>Requirements</h3>
+  <ul>
+    <li>Application form</li>
+    <li>Grades/Transcript</li>
+    <li>Income documents</li>
+    <li>Essay or personal statement</li>
+  </ul>
+</div>
+</div>
+
+<div id="horizontal">
+<div class="details">
+  <h3>Priority Programs:</h3>
+  <ul>
+    <li>Business</li>
+    <li>Information Technology</li>
+    <li>Engineering</li>
+    <li>Social Development</li>
+  </ul>
+  <h3>Benefits:</h3>
+  <ul>
+    <li>Tuition support</li>
+    <li>Allowance</li>
+    <li>Leadership training</li>
+  </ul>
+  <h3>Campus:</h3>
+  <ul>
+     <li>Partner HEIs (includes UCC)</li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-content">
+  <h2>Sirmata.com</h2>
+  <p>Empowering students through opportunity.</p>
+<div class="footer-links">
+  <a href="#">Apply Now</a> |
+  <a href="#">Eligibility</a> |
+  <a href="#">Contact</a>
+</div>
+  <address>
+   questions@sirmata.com <br>
+   123 Education St.
+  </address>
+   
+    <p class="copyright">&copy; 2026 University of Caloocan City</p>
+</div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
