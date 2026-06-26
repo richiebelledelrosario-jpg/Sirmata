@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
 body {
   margin: 0;
-  background-image: url(assets/gradient1.jpg);
+  background-image: url(gradient1.jpg);
   background-repeat: no-repeat;
   background-size: cover; 
   font-size: 17px;
@@ -354,7 +354,7 @@ input[name="slide"] {
     box-sizing: border-box;
     pointer-events: none;
     color: #ffffff;
-    background-image: url(assets/bg2.jpg);
+    background-image: url(bg2.jpg);
 }
 #img-1:checked ~ .info-slide:nth-of-type(1),
 #img-2:checked ~ .info-slide:nth-of-type(2) {
